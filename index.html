@@ -15,16 +15,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
-
-    
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 
 <body>
 <div id="container">
-    <nav class="navbar navbar-expand-lg bg-white">
-        <div class="container-fluid">
-
+    <nav class="navbar navbar-expand-lg bg-white navbar-light fixed-top bg-body-tertiary">
+        <div class="navbar">
             <a class="navbar-brand" href="#"><img src="img/giarddesign.png" alt="giarddesign"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -33,16 +30,14 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
                 <ul class="navbar-nav">
-
                     <li class="nav-item dropdown">
                         <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                            aria-expanded="false">
                             Oferta
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item " href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#of">Action</a></li>
                             <li><a class="dropdown-item" href="#">Another action</a></li>
                             <li>
                                 <hr class="dropdown-divider">
@@ -52,25 +47,26 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">O firmie</a>
+                        <a class="nav-link active" aria-current="page" href="#firma">O firmie</a>
                     </li>
-                    <li class="nav-item" >
-                      <a  class="nav-link active" href="#">Realizacje</a>
-                    </li>
-
                     <li class="nav-item">
-                        <a class="nav-link active" aria-disabled="true">Kontakt</a>
+                        <a class="nav-link active" href="#oferta">Realizacje</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active " aria-disabled="true" href="#kontakt">Kontakt</a>
                     </li>
                 </ul>
-                <form class="d-flex search-form" role="search">
-                    <input class="form-control search-input me-2 " type="search" placeholder="search"
-                           aria-label="Search">
-                    <button class="searchButton" type="submit" id="searchButton"><img src="img/Icon 01.png"></button>
-                </form>
+                <div class="d-flex">
+                    <div class="search-container">
+                        <input type="text" class="form-control search-input" placeholder="Wyszukaj...">
+                        <span class="search-icon ps-3 me-2">
+                    <i class="bi bi-search"></i>
+                </span>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
-
 
     <div class="hero-block">
         <div class="content">
@@ -78,38 +74,56 @@
                 <div class="col-8 col-md-7">
                     <div class="headline pt-5 pe-4 ms-5"><h1>Nowoczesna aranżacja <br>Twojego ogrodu</h1></div>
 
-                    <div class="text ms-5 pe-5">
+                    <div class="text ms-5 pe-5 inter">
                         Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka realizacji. Oferujemy
                         kompleksowy zakres usług z indywidualnym podejściem do każdego projektu.
                     </div>
 
 
-                    <button type="button" class="btn btn-success rounded-pill  me-3" id="przycisk1">Skontaktuj się z
-                        nami
+                    <button type="button" class="btn btn-success rounded-pill  me-3" id="przycisk1">
+                        Skontaktuj się z nami
                     </button>
-                    <button type="button" class="btn btn-outline-success rounded-pill " id="przycisk2">Zobacz nasze
-                        realizacje
-                        przycisk<img src="img/Vector.png"></button>
+                    <button type="button" class="btn btn-outline-success rounded-pill" id="przycisk2">
+                        Zobacz nasze realizacje
+                        <img src="img/Vector.png"></button>
                 </div>
                 <div class="col-4 col-md-5">
-                    <img src="img/Photo.png" class="img-fluid">
+                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="img/Photo.png" class="img-fluid">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/Photo.png" class="img-fluid">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/Photo.png" class="img-fluid">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                                data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                                data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
                 </div>
             </div>
-
         </div>
-
-        
     </div>
 
-    <div class="row oferta-block ms-0 me-0" >
+    <div class="row oferta-block ms-0 me-0" id="">
         <div class=" frame col-12 col-md-6">
-            <div class="navi-small ">Oferta</div>
+            <div class="navi-small">Oferta</div>
 
-            <div class="headline ">
+            <div class="headline">
                 <h1 class="inter" style="font-size: 48px;">Działamy
                     <span class="mont" style="font-size: 48px;font-style: italic;">kompleksowo</span>
                 </h1>
-
             </div>
 
             <div class="text inter">
@@ -133,7 +147,6 @@
                         </a>
                     </p>
                 </div>
-                
 
                 <div class="col-6 col-md-4 col-lg-3 ms-5 me-5 mb-5 card-custom">
                     <img src="img/Icon2.png">
@@ -149,15 +162,12 @@
                     </p>
                 </div>
 
-                
-
                 <div class="col-6 col-md-4 col-lg-3 ms-5 me-5 mb-5 card-custom">
                     <img src="img/Icon3.png">
                     <h2 class="mont" style="font-size: 28px;">
                         Realizacje
                     </h2>
                     Zrealizujemy Twoje marzenie przy użyciu najnowszych rozwiązań i zaawansowanych technologii.
-
                     <p>
                         <a href="#"
                            class="link-success link-offset-2 link-underline-opacity-100 link-underline-opacity-100-hover">
@@ -167,50 +177,42 @@
                     </p>
                 </div>
             </div>
-
         </div>
-
     </div>
 
-    <div class="o_firmie-block">
-
-
+    <div class="o_firmie-block" id="firma">
         <div class="content">
             <div class="row">
-            <img src="img/Photoofb.png" class="float-start col-4 col-sm-5 col-md-6">
-            <div class="opis col-7 col-sm-6 col-md-4">
+                <img src="img/Photoofb.png" class="float-start col-4 col-sm-5 col-md-6">
+                <div class="opis col-7 col-sm-6 col-md-4">
+                    <div class="navi-small pt-5" style="color: #F5F0EC; margin-bottom:16px;">O firmie</div>
+                    <div class="headline"><h1 class="mont">
+                        Tworzymy z <span class="inter" style="font-style: italic;">pasją</span></h1></div>
+                    <div class="text">
+                        Każdy projekt to nowe wyzwanie. Dlatego nasz zespół tworzą
+                        wykwalifikowani projektanci oraz architekci, których zadaniem jest
+                        rozpoznanie i realizacja potrzeb każdego Klienta. Nasza
+                        specjalizacja to przestrzenie nowoczesne, które charakteryzuje
+                        minimalizm, geometria i elegancka prostota. Tworzymy ogrody
+                        małoobsługowe, dostosowane do współczesnego trybu życia.
+                    </div>
 
-                <div class="navi-small pt-5" style="color: #F5F0EC; margin-bottom:16px;">O firmie</div>
-                <div class="headline "><h1 class="mont ">
-                    Tworzymy z <span class="inter" style="font-style: italic;">pasją</span></h1></div>
-
-
-                <div class="text">
-                    Każdy projekt to nowe wyzwanie. Dlatego nasz zespół tworzą
-                    wykwalifikowani projektanci oraz architekci, których zadaniem jest
-                    rozpoznanie i realizacja potrzeb każdego Klienta. Nasza
-                    specjalizacja to przestrzenie nowoczesne, które charakteryzuje
-                    minimalizm, geometria i elegancka prostota. Tworzymy ogrody
-                    małoobsługowe, dostosowane do współczesnego trybu życia.
+                    <button type="button" class="btn btn-outline-light rounded-pill" id="przycisk3">
+                        Poznaj nas bliżej
+                        <img src="img/Vector white.png">
+                    </button>
                 </div>
-
-                <button type="button" class="btn btn-outline-light rounded-pill " id="przycisk3">Poznaj nas bliżej <img
-                        src="img/Vector white.png"></button>
-
             </div>
-        </div>
-
-
         </div>
 
     </div>
     <div style="clear: both;"></div>
 
-   
-    <div class="realizacje-block" >
+
+    <div class="realizacje-block" id="oferta">
 
         <div class="navi-small  sl mb-2">Realizacje</div>
-        <div class="headline sl"><h1 class="mont " style="letter-spacing: -0.03em;">
+        <div class="headline sl"><h1 class="mont" style="letter-spacing: -0.03em;">
             Nasze
             <span class="inter" style="font-style: italic;"> projekty</span>
         </h1>
@@ -218,139 +220,101 @@
 
 
         <div class="grid">
-            <div class="row">
-                <div type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                     class="grid-item  grid-item--height4 col-12 col-md-4 col-lg-4 mb-5 img-fluid ">
-                    <img src="img/slajdy/Photo1.png"  alt="roślinność">
+            <div class="row wrapper">
+                <div data-bs-toggle="modal" data-bs-target="#exampleModal"
+                     class="grid-item  grid-item--height4 col-12 col-md-4 col-lg-4 mb-5 img-fluid">
+                    <img src="img/slajdy/Photo1.png" alt="roślinność">
                 </div>
 
-                <div type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                <div data-bs-toggle="modal" data-bs-target="#exampleModal"
                      class="grid-item  col-12 col-md-4 col-lg-4 mb-5 img-fluid">
                     <img src="img/slajdy/Photo2.png">
                 </div>
 
-                <div type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                <div data-bs-toggle="modal" data-bs-target="#exampleModal"
                      class="grid-item grid-item--height3 col-12 col-md-4 col-lg-4 mb-5 img-fluid">
                     <img src="img/slajdy/Photo3.png">
                 </div>
-
-                <div type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                     class="grid-item col-12 col-md-4 col-lg-4 mb-5 img-fluid">
-                    <img src="img/slajdy/Photo4.png">
-                </div>
-
-                <div type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                     class="grid-item col-12 col-md-4 col-lg-4 mb-5 img-fluid">
-                    <img src="img/slajdy/Photo5.png">
-                </div>
-
-                <div type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                     class="grid-item col-12 col-md-4 col-lg-4 mb-5 img-fluid">
-                    <img src="img/slajdy/Photo6.png">
-                </div>
-
-                <div type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                     class="grid-item col-12 col-md-4 col-lg-4 mb-5 img-fluid">
-                    <img src="img/slajdy/Photo7.png">
-                </div>
-
-                <div type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                     class="grid-item col-12 col-md-4 col-lg-4 mb-5 img-fluid">
-                    <img src="img/slajdy/Photo8.png">
-                </div>
-
-                <div type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                     class="grid-item col-12 col-md-4 col-lg-4 mb-5 img-fluid">
-                    <img src="img/slajdy/Photo9.png">
-                </div>
             </div>
         </div>
-        <button type="button" class="btn btn-outline-dark rounded-pill">Rozwin</button>
+        <div class="text-center pb-3">
+            <button class="btn btn-outline-dark rounded-pill" id="loadMore">Rozwiń</button>
+        </div>
     </div>
 
 
-    <div class="instagram-block ">
-        
-        <div class="rectangle" >
-                <div class="row">
+    <div class="instagram-block">
 
-                        <div class="headline col-12 col-sm-8   mb-0  pb-0">
-                            <h1 class="mont" style="font-weight: 400; letter-spacing: -0.02em;">
-                                Zostańmy w kontakcie! Znajdziesz nas na
-                                <span class="inter" style="font-weight: 500; letter-spacing: +0.01em;font-style: italic;">
+        <div class="rectangle">
+            <div class="row">
+
+                <div class="headline col-12 col-sm-8   mb-0  pb-0">
+                    <h1 class="mont" style="font-weight: 400; letter-spacing: -0.02em;">
+                        Zostańmy w kontakcie! Znajdziesz nas na
+                        <span class="inter" style="font-weight: 500; letter-spacing: +0.01em;font-style: italic;">
                                         Instagramie.
-                                    </span>
-                            </h1>
-                        </div>
+                        </span>
+                    </h1>
+                </div>
 
-                        <div class="kw col-12 col-sm-3  ">
-                            <div class="text inter">Śledź nasze najnowsze realizacje!</div>
-                            <button type="button" class="btn btn-light rounded-pill " id="przycisk4">Instagram</button>
-                        </div>
-                        
+                <div class="kw col-12 col-sm-3">
+                    <div class="text inter">Śledź nasze najnowsze realizacje!</div>
+                    <button type="button" class="btn btn-light rounded-pill" id="przycisk4">Instagram</button>
+                </div>
+
             </div>
         </div>
     </div>
 
-    <div class="footers-block">
+    <div class="footers-block" id="kontakt">
+        <div class="text-1 inter">
+            <div class="line-1">
+                <div class="row">
+                    <img src="img/giarddesign neg.png" class="col-2 col-sm-3 col-md-2 mt-3">
+                    <div class="text mt-4  col-10 col-sm-12 col-md-6" style="color:white;">
+                        Daj znać, co możemy dla Ciebie zrobić!
+                    </div>
+                    <button type="button" class="btn btn-success rounded-pill col-6 col-sm-5 col-md-4" id="przycisk5">
+                        Skontaktuj się z nami
+                    </button>
+                </div>
+            </div>
 
-        
 
-            <div class="text-1 inter">
+            <hr class="horizontal-line">
 
 
-                    <div class="line-1 ">
-                            <div class="row">
-
-                                <img src="img/giarddesign neg.png"  class="col-2 col-sm-3 col-md-2 mt-3">
-
-                                
-                                <div class="text mt-4  col-10 col-sm-12 col-md-6 " style="color:white; ">Daj znać, co możemy dla Ciebie
-                                    zrobić!
-                                 </div>
-                                 <button type="button" class="btn btn-success rounded-pill col-6 col-sm-5 col-md-4 " id="przycisk5">
-                                    Skontaktuj się z nami
-                                </button>
-                            </div>
+            <div class="line-2">
+                <div class="row">
+                    <div class="links col-8  col-md-8">
+                        <p><a class="link me-5 mt-3" href="#">Kontakt</a></p>
+                        <p><a class="link me-5" href="#">Instagram</a></p>
+                        <p><a class="link me-5" href="#">Facebook</a></p>
+                        <p><a class="link me-5" href="#">LinkedIn</a></p>
                     </div>
 
+                    <div class="kontakt col-4  col-md-4">
+                        <div class="telefon me-5" style="color:white; float: left;">000-000-000</div>
+                        <div class="e-mail" style="color:white;">giarddesign@kontakt.pl</div>
 
-                    <hr class="horizontal-line">
+                    </div>
+                </div>
+            </div>
 
-
-                    <div class="line-2">
-                            <div class="row">
-                                    <div class="links col-8  col-md-8 ">
-                                        <p><a class="link me-5 mt-3" href="#">Kontakt</a></p>
-                                        <p><a class="link me-5" href="#">Instagram</a></p>
-                                        <p><a class="link me-5" href="#">Facebook</a></p>
-                                        <p><a class="link me-5" href="#">LinkedIn</a></p>
-                                    </div>
-
-                                    <div class="kontakt col-4  col-md-4">
-                                        <div class="telefon me-5" style="color:white; float: left;">000-000-000</div>
-                                        <div class="e-mail" style="color:white;  ">giarddesign@kontakt.pl</div>
-                                        
-                                    </div>
-                            </div>  
-                     </div>
-            
         </div>
 
         <div class="text-2">
             <div class="row">
-                <div class="copy inter col-6 ">Prawa zastrzeżone &copy; 2022</div>
+                <div class="copy inter col-6">Prawa zastrzeżone &copy; 2022</div>
                 <div class="made_by col-6">made by<img src="img/logo-full-light.png" class="ms-3"></div>
-                
+
             </div>
         </div>
     </div>
-    
 
-    
 
     <!--    MODAL-->
-    <div class="modal fade " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
          aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -363,7 +327,6 @@
 </div>
 
 
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
@@ -373,7 +336,7 @@
 
 
 <script type="text/javascript">
-    
+
     document.addEventListener('DOMContentLoaded', function () {
         let elem = document.querySelector('.grid');
         let msnry = new Masonry(elem, {});
@@ -384,16 +347,56 @@
         gridItems.forEach(function (gridItem) {
             gridItem.addEventListener("click", function () {
                 let imgElement = this.querySelector("img");
-                
+
 
                 let obrazekModala = modal.querySelector('#modal-img');
                 obrazekModala.setAttribute('src', imgElement.getAttribute('src'));
             });
         });
+
+        let loadMoreButton = document.getElementById('loadMore');
+        let rowElement = document.querySelector('.wrapper');
+
+        let nextImagesToLoad = [
+            {src: "img/slajdy/Photo4.png", alt: "Opis4"},
+            {src: "img/slajdy/Photo5.png", alt: "Opis5"},
+            {src: "img/slajdy/Photo6.png", alt: "Opis6"},
+            {src: "img/slajdy/Photo7.png", alt: "Opis7"},
+            {src: "img/slajdy/Photo8.png", alt: "Opis8"},
+            {src: "img/slajdy/Photo9.png", alt: "Opis9"}
+        ];
+
+        loadMoreButton.addEventListener('click', function () {
+            for (let i = 0; i < 3 && nextImagesToLoad.length > 0; i++) {
+                let imageData = nextImagesToLoad.shift();
+                let newGridItem = document.createElement('div');
+                newGridItem.classList.add('grid-item', 'col-12', 'col-md-4', 'col-lg-4', 'mb-5', 'img-fluid');
+                newGridItem.setAttribute('type', 'button');
+                newGridItem.setAttribute('data-bs-toggle', 'modal');
+                newGridItem.setAttribute('data-bs-target', '#exampleModal');
+                newGridItem.removeAttribute('style');
+
+                let newImg = document.createElement('img');
+                newImg.src = imageData.src;
+                newImg.alt = imageData.alt;
+                newGridItem.appendChild(newImg);
+
+                rowElement.appendChild(newGridItem);
+
+                msnry.appended(newGridItem);
+
+                newGridItem.addEventListener("click", function () {
+                    let obrazekModala = modal.querySelector('#modal-img');
+                    obrazekModala.setAttribute('src', newImg.getAttribute('src'));
+                });
+            }
+
+            if (nextImagesToLoad.length === 0) {
+                loadMoreButton.style.display = "none";
+            }
+        });
     });
 </script>
-
-  
 
 
 </body>
