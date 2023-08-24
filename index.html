@@ -16,6 +16,9 @@
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/macy@2"></script>
+    
 </head>
 
 <body>
@@ -219,20 +222,20 @@
         </div>
 
 
-        <div class="grid">
-            <div class="row wrapper">
-                <div data-bs-toggle="modal" data-bs-target="#exampleModal"
-                     class="grid-item  grid-item--height4 col-12 col-md-4 col-lg-4 mb-5 img-fluid">
+        <div class="grid ps-1">
+            <div class="row wrapper fotki grid-item">
+                <div data-bs-toggle="modal" data-bs-target="#exampleModal">
+                     
                     <img src="img/slajdy/Photo1.png" alt="roślinność">
                 </div>
 
                 <div data-bs-toggle="modal" data-bs-target="#exampleModal"
-                     class="grid-item  col-12 col-md-4 col-lg-4 mb-5 img-fluid">
+                    >
                     <img src="img/slajdy/Photo2.png">
                 </div>
 
                 <div data-bs-toggle="modal" data-bs-target="#exampleModal"
-                     class="grid-item grid-item--height3 col-12 col-md-4 col-lg-4 mb-5 img-fluid">
+                     >
                     <img src="img/slajdy/Photo3.png">
                 </div>
             </div>
@@ -370,7 +373,7 @@
             for (let i = 0; i < 3 && nextImagesToLoad.length > 0; i++) {
                 let imageData = nextImagesToLoad.shift();
                 let newGridItem = document.createElement('div');
-                newGridItem.classList.add('grid-item', 'col-12', 'col-md-4', 'col-lg-4', 'mb-5', 'img-fluid');
+                newGridItem.classList.add('grid-item',);
                 newGridItem.setAttribute('type', 'button');
                 newGridItem.setAttribute('data-bs-toggle', 'modal');
                 newGridItem.setAttribute('data-bs-target', '#exampleModal');
@@ -396,6 +399,30 @@
             }
         });
     });
+
+    <!--masonry galeria-->
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    var macyInstance = Macy({
+    container: '.fotki', 
+    columns: 3,
+    trueOrder: true,
+    waitForImages: false,
+    margin: 24,
+     breakAt: {
+        
+        940: 3,
+        520: 2,
+        400: 1
+    },
+    margin: {
+    x: 20,
+    y: 10,
+  }
+    });
+});
 </script>
 
 

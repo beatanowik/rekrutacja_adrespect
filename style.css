@@ -299,26 +299,6 @@ body {
 }
 
 
-.grid-item img {
-    display: block;
-    width: 100%;
-    height: auto;
-    transition: transform 0.3s ease;
-}
-
-.grid-item {
-    transition: transform 0.3s ease;
-    overflow: hidden;
-    width: 100%;
-    margin-bottom: 10px;
-}
-
-
-.grid-item:hover {
-    transform: scale(1.05);
-}
-
-
 @media (max-width: 767px) {
     .inter {
         font-size: 30px;
@@ -353,4 +333,16 @@ body {
 
 .search-container:hover .search-input {
     opacity: 1; /* widoczne po najechaniu */
+}
+
+
+.fotki {
+    width: 80%;
+    margin: 50px auto;
+}
+
+
+.grid-item {
+    width: 100%;
+
 }
